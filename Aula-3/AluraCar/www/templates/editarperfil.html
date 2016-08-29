@@ -1,0 +1,29 @@
+<ion-view view-title="Perfil">
+	<ion-content>
+    <div class="list card">
+      <div class="item item-avatar">
+        <h2>{{usuarioLogado.nome}}</h2>
+      </div> <!-- Fim do cabeçalho do Card -->
+      <div class="item item-body" >
+        <div class="list">
+          <label class="item item-input">
+            <span ng-show="!isEdit" class="input-label">{{usuarioLogado.dataNascimento}}</span>
+            <input ng-show="isEdit" type="text" ng-model="usuarioLogado.dataNascimento">
+          </label>
+          <label class="item item-input">
+            <span ng-show="!isEdit"  class="input-label">{{usuarioLogado.telefone | brPhoneNumber}}</span>
+            <input ng-show="isEdit" type="text" ng-model="usuarioLogado.telefone" >
+          </label>
+          <label class="item item-input">
+            <span ng-show="!isEdit" class="input-label">{{usuarioLogado.email}}</span>
+            <input ng-show="isEdit" type="text" ng-model="usuarioLogado.email">
+          </label>
+        </div>
+        <div class="item item-divider">
+          <button ng-click="acaoBotao()" type="button" class="button button-full button-positive"
+          >{{textoBtn}}</button>
+        </div>
+      </div><!-- Fim do corpo do cartão -->
+    </div><!-- Fim do cartão -->
+	</ion-content>
+</ion-view>
